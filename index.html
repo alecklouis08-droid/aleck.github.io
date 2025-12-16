@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleck Louis Abella Gener - Interactive Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <h1>My Profile</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#contact-me">Message Me</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="left-column">
+            <section id="home" class="profile-section">
+                <img src="profile.jpg" alt="Profile Image" class="profile-img">
+                <h1>Aleck Louis Abella Gener</h1>
+                <p class="job-title" id="jobTitle">Amateur Web Developer | 2nd Year Student</p>
+                <button id="editJobBtn">Edit Job Title</button>
+                <hr>
+                
+                <section class="contact-section">
+                    <h3>Contact</h3>
+                    <p>Phone: 09941734231</p>
+                    <p>Email: <a href="mailto:alecklouis08@gmail.com">alecklouis08@gmail.com</a></p>
+                </section>
+                <hr>
+                
+                <section class="skills-section">
+                    <h2>Skills <button id="toggleSkillsBtn">Hide Skills</button></h2>
+                    <div id="skillsSection">
+                        <dl>
+                            <dt>Basic Skillset</dt>
+                            <dd>Go 3 days without sleep</dd>
+                            <dd>Play Badminton</dd>
+                            <dd>Can Swim</dd>
+                            <dd>Can sprint for 3 Minutes</dd>
+                        </dl>
+                    </div>
+                </section>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section id="about" class="about-section">
+                <h2>About Me</h2>
+                <p>Second Year National University Fairview Student. Former Badminton Varsity player of Santiago City National Highschool. I grew up in Region II.</p>
+            </section>
+            <hr>
+            
+            <section id="contact-me" class="message-section">
+                <h1>Message Me</h1>
+                <form class="message-form" onsubmit="return validateForm()">
+                    <p>
+                        <label>Name</label><br>
+                        <input type="text" id="nameField" required>
+                    </p>
+                    <p>
+                        <label>Email</label><br>
+                        <input type="email" id="emailField" required>
+                    </p>
+                    <p>
+                        <label>Message</label><br>
+                        <textarea id="msgBox" maxlength="200" rows="5" required></textarea>
+                        <p>Characters left: <span id="counter">200</span></p>
+                    </p>
+                    <p>
+                        <input type="submit" value="Send">
+                    </p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p><strong>WebProg - Web Programming 2025</strong> | <span id="dateDisplay"></span></p>
+        <button id="themeBtn">Toggle Dark Mode</button>
+    </footer>
+</body>
+</html>
